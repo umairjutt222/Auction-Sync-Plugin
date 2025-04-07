@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.mainSection {
+  display: flex;
+}
+.leftBar {
+  width: 41%;
+}
+.leftBarNav {
+  height: 48px;
+  /* height: 95px; */
+  background-color: rgb(255, 80, 0);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 5px 0px,
+    rgba(0, 0, 0, 0.03) 0px 2px 2px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+}
+.leftBarNav:hover {
+  background-color: #b23800;
+}
+.leftBarNav p {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  color: white;
+}
+.mainInfoBox {
+  height: 86vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.primaryInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 3px;
+}
+.titleBox {
+  width: 79%;
+}
+.titleBox .subTitle {
+  color: rgba(0, 0, 0, 0.48);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+.calenderBox {
+  width: 66px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.calenderTop {
+      color: #fff;
+    display: flex;
+    padding: 7px 2px;
+    min-height: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #e53935;
+    font-size: 14px;
+    line-height: 14px;
+}
+.titleBox p{
+ padding-bottom: 0px;
+}
+.tabs {
+  display: flex;
+}
+
+.tab {
+  width: 33.3%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tabTitle {
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.02857em;
+  color: rgba(0, 0, 0, 0.48);
+}
+
+/* Active Tab Styles */
+.tab.active {
+  border-bottom: 2px solid #ff5000;
+}
+
+.tab.active .tabTitle {
+  color: #ff5000;
+}
+
+/* Tab Content Styles */
+.tabContent {
+  padding: 17px 31px;
+  display: none; /* Initially hidden */
+  padding: 20px;
+}
+
+/* Active Tab Content */
+.tabContent.active {
+  display: block;
+}
+.rightSection {
+  width: 100%;
+}
+.rightSectionNav {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  position: relative;
+  z-index: 5;
+}
+.menuIconBox {
+  height: 100%;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuIcon {
+  height: 43px;
+  width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: white;
+  transition: background-color 300ms ease-in-out;
+}
+
+.menuIcon:hover {
+  background-color: #f5f5f5;
+}
+
+.diagonalSeperator {
+  left: -14px;
+  width: 16px;
+  height: 110%;
+  display: inline-block;
+  position: relative;
+  transform: rotate(-15deg);
+  box-shadow: 5px 0 5px -3px #ddd;
+}
+.printerBox,
+.shareBox {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  cursor: pointer;
+}
+
+.rightProductMainBox {
+  height: 86vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: #efeee9;
+}
+.rightProductBox {
+  padding: 97px 100px 30px 100px;
+}
+.searchBarBox {
+  /* width: 100%; */
+  height: 41px;
+  display: flex;
+  align-items: center;
+  padding: 10px 14px 10px 19px;
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  column-gap: 14px;
+}
+.searchInput {
+  width: 100%;
+  font-size: 1.5rem;
+  border: none;
+  letter-spacing: 1px;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchInput::placeholder {
+  color: #a2a2a2; /* Change to your desired color */
+  opacity: 1; /* Ensures full visibility in some browsers */
+}
+.backSpaceBox {
+  height: 35px;
+  width: 40px;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 100%;
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+
+.backSpaceBox:hover {
+  background-color: #f5f5f5;
+}
+.productCount {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.48);
+}
+.productMainBox {
+  display: flex;
+  flex-direction: row;
+  row-gap: 16px;
+  margin: 20px 0px;
+}
+.productBox {
+  width: 100%;
+  /* height: 170px; */
+  background-color: white;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.productImgBox {
+  width: 226px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productImgIconsBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productImgIconsBox {
+  padding: 10px;
+}
+.tagBox {
+  background-color: rgb(224, 224, 224);
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 600;
+}
+.productDetailBox {
+  width: 100%;
+  padding: 20px 16px 16px 16px;
+}
+.productTitle {
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 7px;
+    padding: 0;
+}
+.productSubTitle {
+    font-size: 12.8px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 0;
+    line-height: 12px;
+    padding: 0;
+}
+.priceTag {
+  color: rgba(0, 0, 0, 0.48);
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+}
+.priceBox {
+  width: 100%;
+  height: 46px;
+  color: rgb(66, 66, 66);
+  border: 2px solid rgb(189, 189, 189);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+/* ///////////////////// */
+.auction-slider {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.auction-slider-for {
+  width: 100%;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auction-slider-for img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.auction-slider-nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 3px;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+}
+
+.auction-slider-nav::-webkit-scrollbar {
+  display: none;
+}
+.auction-items-main {
+  width: 100%;
+
+}
+
+.auction-items {
+  min-width: 106px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.auction-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styling for arrow buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.311);
+  color: white;
+  border: none;
+  padding: 0px 10px 3px 10px;
+  cursor: pointer;
+  font-size: 17px;
+  z-index: 10;
+}
+
+.left-btn {
+  left: 0px;
+}
+
+.right-btn {
+  right: 0px;
+}
+.info-badge {
+    border: 1px solid #bdbdbd;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #424242;
+    font-size: 12px;
+    padding: 4px 8px;
+    margin-right: 8px;
+    font-weight: 600;
+        height: 21px;
+}
+.schedule-date p{
+     font-size: 10px;
+    margin: 0;
+    padding: 0;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+.priceBox p {
+    padding: 0;
+    line-height: 8px;
+}
+@media (max-width: 1165px) {
+  .rightProductBox {
+    padding: 97px 50px 30px 50px;
+  }
+}
+@media (max-width: 1066px) {
+  .leftBar {
+    width: 30%;
+  }
+}
+@media (max-width: 668px) {
+  .mainSection {
+    flex-direction: column;
+  }
+  .leftBar {
+    width: 100%;
+  }
+}
